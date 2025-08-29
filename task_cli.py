@@ -46,7 +46,7 @@ def add_task(description):
     save_tasks(tasks)
     print(f"Task added with ID: {new_id}")
 
-
+#update task status
 def update_task(task_id, new_status):
     tasks = load_tasks()
     for task in tasks:
@@ -59,6 +59,40 @@ def update_task(task_id, new_status):
             return
     print(f"Task with ID {task_id} not found.")
 
+#delete a task
+def delete_task(task_id):
+    tasks = load_tasks()
+    for i, task in enumerate(tasks):
+        if task['id'] == task_id:
+            del tasks[i]
+            save_tasks(tasks)
+            print(f"Task {task_id} deleted.")
+            return
+    print(f"Task with ID {task_id} not found.")
+    
+#list all tasks 
+def list_tasks(filter_status=None):
+    tasks = load_tasks()
+    if not tasks:
+        print("No tasks found.")
+        return
+    if filter_status:
+        tasks = [t for t in tasks if t['status'] == filter_status]
+    if not tasks:
+        print(f"No tasks with status '{filter_status}' found.")
+        return
+    
+    print("Tasks:")
+    print("ID | Description | Status | Created At | Completed At")
+    print("-" * 60)
+    for task in tasks:
+        tid = task['id']
+        desc = task['description']
+        status = task['status']
+        created_at = task['created_at']
+        completed_at = task['completed_at'] if task['completed_at'] else "N/A"
+        print(f"{tid} | {desc} | {status} | {created_at} | {completed_at}")
+
 def main():
     args = sys.argv[1:]
 
@@ -67,29 +101,42 @@ def main():
         print ("Commands: add, list, complete, delete")
         return
     
-    comand = args[0]
+    cmd = args[0]
 
-    if comand == "add":
+    if cmd == "add":
         if len(args) < 2:
             print("Provide a task description.")
         else:
             description = " ".join(args[1:])
             add_task(description)
 
-    # elif comand == "list":
-    #     tasks = load_tasks()
-    #     if not tasks:
-    #         print("No tasks found.")
-    #     else:
-    #         for task in tasks:
-    #             status = task['status']
-    #             desc = task['description']
-    #             tid = task['id']
-    #             print(f"[{tid}] {desc} - {status}")
-    else:
-        print(f"Unknown command: {comand}")
-    
+    elif cmd == "update":
+        if len(args) < 3:
+            print("Usage: task-cli update <task_id> <status>")
+        else:
+            try:
+                task_id = int(args[1])
+                new_status = args[2]
+                update_task(task_id, new_status)
+            except ValueError:
+                print("Task ID must be an integer.")
 
+    elif cmd == "delete":
+        if len(args) < 2:
+            print("Usage: task-cli delete <task_id>")
+        else:
+            try:
+                task_id = int(args[1])
+                delete_task(task_id)
+            except ValueError:
+                print("Task ID must be an integer.")
+    
+    elif cmd == "list":
+        if len(args) == 1:
+            list_tasks()
+        else:
+            filter_status = args[1]
+            list_tasks(filter_status)
         
 if __name__ == "__main__":
     main()
