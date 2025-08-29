@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "description": "I have to buy a book",
+        "status": "todo",
+        "created_at": "2025-08-28T16:34:58.266145",
+        "completed_at": null
+    },
+    {
+        "id": 2,
+        "description": "I have to buy a pen",
+        "status": "todo",
+        "created_at": "2025-08-28T16:35:14.056923",
+        "completed_at": null
+    }
+]
