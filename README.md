@@ -120,4 +120,4 @@ Each task is represented as an object with the following structure:
 
 ## 📬 Contact
 
-For any questions or feedback, please open an issue in this repository or contact the maintainer at [harrynyinyi183@gmail.com]
+For any questions or feedback, please open an issue in this repository or contact me via [harrynyinyi183@gmail.com]
