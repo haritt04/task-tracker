@@ -6,6 +6,11 @@ from datetime import datetime
 import sys
     
 JSON_FILE = 'tasks.json'
+Status = {'todo', 'in-progress', 'done'}
+
+#current timestamp in iso format
+def now_iso_utc():
+    return datetime.utcnow().replace(microsecond=0).isoformat() + 'Z'
 
 #load and create json file if does not exist
 if not os.path.exists(JSON_FILE):
