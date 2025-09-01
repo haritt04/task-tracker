@@ -1,12 +1,12 @@
 # Task Tracker CLI
 
-A simple command-line interface (CLI) application to manage and track your tasks efficiently.([GitHub][1])
+A simple command-line interface (CLI) application to manage and track your tasks efficiently.
 
 ---
 
 ## Project Overview
 
-This project is designed to help you build a CLI tool for task management, focusing on essential operations like adding, updating, deleting, and listing tasks. Tasks are stored in a local `tasks.json` file, ensuring data persistence across sessions. This application is ideal for developers looking to practice file handling, user input processing, and building CLI applications.([roadmap.sh][2])
+This project is designed to help you build a CLI tool for task management, focusing on essential operations like adding, updating, deleting, and listing tasks. Tasks are stored in a local `tasks.json` file, ensuring data persistence across sessions. This application is ideal for developers looking to practice file handling, user input processing, and building CLI applications.
 
 Inspired by the [Task Tracker project on roadmap.sh](https://roadmap.sh/projects/task-tracker), this tool serves as a practical exercise in creating a functional and user-friendly command-line application.
 
@@ -18,13 +18,13 @@ Inspired by the [Task Tracker project on roadmap.sh](https://roadmap.sh/projects
 * **Update Task Description**: Modify existing task descriptions.
 * **Delete a Task**: Remove tasks from your list.
 * **Mark Task Status**: Set tasks as `todo`, `in-progress`, or `done`.
-* **List Tasks**: View all tasks or filter by status.([GitHub][3], [roadmap.sh][4], [Go Packages][5])
+* **List Tasks**: View all tasks or filter by status.
 
 ---
 
 ## Installation
 
-1. Clone this repository:([roadmap.sh][6])
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/haritt04/task-tracker.git
@@ -49,7 +49,7 @@ python task_cli.py <command> [<args>]
 
 ### Commands:
 
-* **add**: Add a new task.([GitHub][1])
+* **add**: Add a new task.
 
 ```bash
   python task_cli.py add "Task description"
@@ -57,7 +57,7 @@ python task_cli.py <command> [<args>]
 
 
 
-* **update**: Update an existing task's description.([roadmap.sh][2])
+* **update**: Update an existing task's description.
 
 ```bash
   python task_cli.py update <task_id> "New description"
