@@ -1,7 +1,3 @@
-Certainly! Here's a professional and comprehensive `README.md` for your Task Tracker CLI project, based on the roadmap.sh project description:
-
----
-
 # Task Tracker CLI
 
 A simple command-line interface (CLI) application to manage and track your tasks efficiently.([GitHub][1])
