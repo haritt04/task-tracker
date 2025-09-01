@@ -1,16 +1,16 @@
 [
-    {
-        "id": 1,
-        "description": "I have to buy a book",
-        "status": "todo",
-        "created_at": "2025-08-28T16:34:58.266145",
-        "completed_at": null
-    },
-    {
-        "id": 2,
-        "description": "I have to buy a pen",
-        "status": "todo",
-        "created_at": "2025-08-28T16:35:14.056923",
-        "completed_at": null
-    }
+  {
+    "id": 1,
+    "description": "Buy Milk with Bread",
+    "status": "done",
+    "createdAt": "2025-09-01T05:07:38Z",
+    "updatedAt": "2025-09-01T05:09:38Z"
+  },
+  {
+    "id": 2,
+    "description": "Buy Meat with Rice",
+    "status": "todo",
+    "createdAt": "2025-09-01T05:08:06Z",
+    "updatedAt": "2025-09-01T05:08:39Z"
+  }
 ]
